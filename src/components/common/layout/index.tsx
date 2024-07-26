@@ -7,6 +7,7 @@ import Aside from "@/components/common/aside";
 interface LayoutProps {
   children: ReactNode;
 }
+
 const Layout = ({ children }: LayoutProps) => {
   return (
     <main className="flex min-h-screen flex-col">
@@ -14,11 +15,9 @@ const Layout = ({ children }: LayoutProps) => {
         <Aside />
         <div className={"flex w-full flex-col"}>
           <header className={"flex h-[50px] items-center justify-between px-4"}>
-            <nav> nav </nav>
-
+            <nav> nav</nav>
             <div className={"flex gap-2"}>
-              {" "}
-              <p> user </p>{" "}
+              <p> user </p>
               <span>
                 <Settings />
               </span>
