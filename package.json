@@ -10,7 +10,7 @@
     "start": "next start",
     "check": "biome check src/**/*.{ts,tsx}",
     "check:fix": "biome check src/**/*.{ts,tsx} --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"!src/trpc/**/*\"",
+    "format": "prettier --write \"src/app/**/*.{ts,tsx}\" && prettier --write \"src/components/**/*.{ts,tsx}\" && prettier --write \"src/constants/**/*.{ts,tsx}\"",
     "prepare": "husky",
     "pre-commit": "lint-staged"
   },
