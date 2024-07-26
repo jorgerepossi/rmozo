@@ -1,9 +1,9 @@
 const HomePage = () => {
   return (
-    <div className={'bg-slate-50 h-[100dvh]'}>
+    <div className={"h-[100dvh] bg-slate-50"}>
       <h1>Home Page</h1>
     </div>
   );
-}
+};
 
-export default HomePage
+export default HomePage;
