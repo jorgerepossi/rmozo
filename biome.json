@@ -1,12 +1,78 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
 	"organizeImports": {
-		"enabled": true
+		"enabled": false
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"a11y": {
+				"noBlankTarget": "error",
+				"noPositiveTabindex": "error",
+				"useAltText": "warn",
+				"useAnchorContent": "error",
+				"useValidAnchor": "error"
+			},
+			"correctness": {
+				"recommended": true,
+				"noChildrenProp": "error",
+				"noConstAssign": "error",
+				"noEmptyPattern": "error",
+				"noUnnecessaryContinue": "warn",
+				"noUnreachable": "error",
+				"noUnusedVariables": "error",
+				"noVoidElementsWithChildren": "error",
+				"useValidForDirection": "error",
+				"noConstructorReturn": "error",
+				"noVoidTypeReturn": "error"
+			},
+			"performance": {
+				"recommended": true,
+				"noDelete": "error"
+			},
+			"complexity": {
+				"useSimplifiedLogicExpression": "off",
+				"noMultipleSpacesInRegularExpressionLiterals": "warn",
+				"recommended": true,
+				"noUselessFragments": "error",
+				"useOptionalChain": "warn",
+				"noExtraBooleanCast": "warn"
+			},
+			"style": {
+				"noArguments": "error",
+				"useTemplate": "warn",
+				"recommended": true,
+				"useFragmentSyntax": "off",
+				"useSelfClosingElements": "off",
+				"useSingleVarDeclarator": "error",
+				"useWhile": "warn",
+				"noUnusedTemplateLiteral": "warn",
+				"useConst": "error",
+				"noVar": "warn"
+			},
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "warn",
+				"noDebugger": "error",
+				"noAsyncPromiseExecutor": "warn",
+				"noCatchAssign": "error",
+				"noDoubleEquals": "warn",
+				"noFunctionAssign": "error",
+				"noImportAssign": "error",
+				"noConstEnum": "error",
+				"noEmptyInterface": "off"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": false
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"quoteProperties": "asNeeded"
 		}
 	}
 }

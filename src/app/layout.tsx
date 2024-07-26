@@ -7,21 +7,21 @@ import { TRPCReactProvider } from "@/trpc/react";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-	title: "Rapimozo",
-	description: "Conectate aquí, rápido y simple.",
-	icons: [{ rel: "icon", url: "/favicon.ico" }],
+  title: "Rapimozo",
+  description: "Conectate aquí, rápido y simple.",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{ children: React.ReactNode }>) {
-	return (
-		<html lang="en" className={`${GeistSans.variable}`}>
-			<body>
-				<TRPCReactProvider>
-					<ThemeProvider>{children}</ThemeProvider>
-				</TRPCReactProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en" className={`${GeistSans.variable}`}>
+      <body>
+        <TRPCReactProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </TRPCReactProvider>
+      </body>
+    </html>
+  );
 }
