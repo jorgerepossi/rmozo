@@ -12,8 +12,34 @@ const Layout = ({children}: LayoutProps) => {
         <div className={'flex flex-col '}>
           <div>logo</div>
         </div>
-        <div>menu</div>
-        <div>logout</div>
+        <div>
+          <div>
+            <ul>
+              <li> Mesas Activas</li>
+              <li> Mesas Atendidas</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li> Menú</li>
+              <li> Logo</li>
+              <li> Datos del WIFI</li>
+              <li> Mensajes predefinidos</li>
+              <li> Estadísticas</li>
+              <li> Ajustes</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li> Generar QR</li>
+              <li> Soporte Online</li>
+              <li> Datos del WIFI</li>
+              <li> Servicios</li>
+
+            </ul>
+          </div>
+        </div>
+        <div>Logout</div>
       </aside>
       <div className={'flex flex-col w-full'}>
         <header className={'flex justify-between px-4'}>
