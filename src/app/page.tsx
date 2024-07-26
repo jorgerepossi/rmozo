@@ -1,13 +1,11 @@
-import {   HydrateClient } from "@/trpc/server";
-import HomePage from '@/components/pages/Home'
+import HomePage from "@/components/pages/Home";
+import { HydrateClient } from "@/trpc/server";
 
-export default function Home(){
-  return (
-    <HydrateClient>
-      <div>
-        crear layout de home
-      </div>
-      <HomePage />
-    </HydrateClient>
-)
+export default function Home() {
+	return (
+		<HydrateClient>
+			<div>crear layout de home</div>
+			<HomePage />
+		</HydrateClient>
+	);
 }
