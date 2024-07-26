@@ -1,14 +1,18 @@
-import AsideMenu from '@/components/common/aside/AsideMenu'
-import Logo from '@/components/common/aside/Logo'
-import LogOutButton from '@/components/common/aside/LogOutButton'
+import AsideMenu from "@/components/common/aside/AsideMenu";
+import Logo from "@/components/common/aside/Logo";
+import LogOutButton from "@/components/common/aside/LogOutButton";
 
 const Aside = () => {
   return (
-    <aside className={'grid grid-rows-[auto_1fr_auto] min-w-[200px]  px-2 py-4 border-r-[1px] border-neutral-n10'}>
+    <aside
+      className={
+        "grid min-w-[200px] grid-rows-[auto_1fr_auto] border-r-[1px] border-neutral-n10 px-2 py-4"
+      }
+    >
       <Logo />
-     <AsideMenu />
+      <AsideMenu />
       <LogOutButton />
     </aside>
-  )
-}
-export default Aside
+  );
+};
+export default Aside;
