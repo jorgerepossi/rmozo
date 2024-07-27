@@ -67,3 +67,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes openAside {
+  from{
+    width: 200px ;
+    background: azure;
+  }
+  to{
+    width: 0 ;
+    background: bisque;
+  }
+
+}@keyframes closeAside {
+  from{
+    width: 0 ;
+  }
+  to{
+    width: 200px ;
+  }
+
+}

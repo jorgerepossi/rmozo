@@ -1,16 +1,9 @@
-import MenuItem from "@/components/common/aside/menu/MenuItem";
+import MenuSectionWrapper from "@/components/common/aside/menu/MenuSectionWrapper";
 
 import type { MenuSectionProps } from "@/types/menu";
 
 const UtilitiesMenu = ({ items }: MenuSectionProps) => (
-  <section>
-    <h2>Utilities</h2>
-    <ul>
-      {items.map((item) => (
-        <MenuItem key={item.id} {...item} />
-      ))}
-    </ul>
-  </section>
+  <MenuSectionWrapper items={items} label={"Utilities"} />
 );
 
 export default UtilitiesMenu;
