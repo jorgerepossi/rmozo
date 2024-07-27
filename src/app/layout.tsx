@@ -2,9 +2,10 @@ import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-
-import { TRPCReactProvider } from "@/trpc/react";
 import { ThemeProvider } from "next-themes";
+
+import ModalProvider from "@/providers/ModalProvider";
+import { TRPCReactProvider } from "@/trpc/react";
 
 export const metadata: Metadata = {
   title: "Rapimozo",
@@ -19,7 +20,10 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         <TRPCReactProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <ModalProvider />
+            {children}
+          </ThemeProvider>
         </TRPCReactProvider>
       </body>
     </html>

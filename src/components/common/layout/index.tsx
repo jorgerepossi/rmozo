@@ -1,31 +1,32 @@
-import type { ReactNode } from "react";
-
-import { Settings } from "lucide-react";
+"use client";
+import { type ReactNode, useState, useEffect } from "react";
 
 import Aside from "@/components/common/aside";
+import Box from "@/components/common/box";
+import Header from "@/components/common/header";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return <>... loading</>;
+
   return (
-    <main className="flex min-h-screen flex-col">
-      <div className={"flex h-full min-h-[100dvh]"}>
+    <main className="flex h-[100%] min-h-screen flex-col bg-neutral">
+      <Box className={"flex h-full min-h-[100dvh]"}>
         <Aside />
-        <div className={"flex w-full flex-col"}>
-          <header className={"flex h-[50px] items-center justify-between px-4"}>
-            <nav> nav</nav>
-            <div className={"flex gap-2"}>
-              <p> user </p>
-              <span>
-                <Settings />
-              </span>
-            </div>
-          </header>
-          {children}
-        </div>
-      </div>
+        <Box className={"flex w-full flex-col gap-4"}>
+          <Header />
+          <Box className={"px-4"}>{children}</Box>
+        </Box>
+      </Box>
     </main>
   );
 };

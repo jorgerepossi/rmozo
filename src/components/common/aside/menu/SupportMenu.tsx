@@ -1,16 +1,9 @@
-import MenuItem from "@/components/common/aside/menu/MenuItem";
+import MenuSectionWrapper from "@/components/common/aside/menu/MenuSectionWrapper";
 
 import type { MenuSectionProps } from "@/types/menu";
 
 const SupportMenu: React.FC<MenuSectionProps> = ({ items }) => (
-  <section>
-    <h2>Support</h2>
-    <ul>
-      {items.map((item) => (
-        <MenuItem key={item.id} {...item} />
-      ))}
-    </ul>
-  </section>
+  <MenuSectionWrapper label={"Support"} items={items} />
 );
 
 export default SupportMenu;
