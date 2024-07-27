@@ -1,5 +1,6 @@
-import type { LucideProps } from "lucide-react";
 import type { ForwardRefExoticComponent, RefAttributes } from "react";
+
+import type { LucideProps } from "lucide-react";
 
 export interface MenuItemProps {
   id: string;

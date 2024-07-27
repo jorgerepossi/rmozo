@@ -1,16 +1,9 @@
-import MenuItem from "@/components/common/aside/menu/MenuItem";
+import MenuSectionWrapper from "@/components/common/aside/menu/MenuSectionWrapper";
 
 import type { MenuSectionProps } from "@/types/menu";
 
 const BarTablesMenu = ({ items }: MenuSectionProps) => (
-  <section>
-    <h2>Bar Tables</h2>
-    <ul>
-      {items.map((item) => (
-        <MenuItem key={item.id} {...item} />
-      ))}
-    </ul>
-  </section>
+  <MenuSectionWrapper items={items} label={"Bar Tables"} />
 );
 
 export default BarTablesMenu;
