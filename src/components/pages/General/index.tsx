@@ -1,14 +1,17 @@
-import UpdateLogo from "@/components/update-logo";
-import UpdateMenu from "@/components/update-menu";
+import Box from "@/components/common/box";
+import UpdateLogo from "@/components/common/update-logo";
+import UpdateMenu from "@/components/common/update-menu";
+import UpdateMessage from "@/components/common/update-message";
+import UpdateWifi from "@/components/common/update-wifi";
 
 const General = () => {
   return (
-    <div className={"grid grid-flow-col grid-cols-12 gap-[16px]"}>
+    <Box className={"grid grid-flow-col grid-cols-12 grid-rows-12 gap-[16px]"}>
       <UpdateMenu />
-      <div> Mensjes pre deefinidos</div>
+      <UpdateMessage />
+      <UpdateWifi />
       <UpdateLogo />
-      <div> Datos de wifi</div>
-    </div>
+    </Box>
   );
 };
 export default General;
