@@ -1,3 +1,4 @@
+import Box from "@/components/common/box";
 import Config from "@/components/common/header/Config";
 
 const Header = () => {
@@ -8,10 +9,10 @@ const Header = () => {
       }
     >
       <nav> nav</nav>
-      <div className={"flex items-center gap-2"}>
+      <Box className={"flex items-center gap-2"}>
         <p> user </p>
         <Config />
-      </div>
+      </Box>
     </header>
   );
 };
