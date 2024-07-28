@@ -5,6 +5,7 @@ interface BoxProps<T extends ElementType> {
   children: ReactNode;
   props?: ComponentPropsWithoutRef<T>;
   className?: string;
+  onClick?: () => void;
 }
 
 const Box = <T extends ElementType = "div">({

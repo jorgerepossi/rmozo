@@ -14,18 +14,18 @@ const MenuItem = ({
   return (
     <Link href={link ?? ""}>
       <li
-        className={`flex items-center gap-2 ${additionalClasses} ${isAsideOpen ? "justify-center" : ""}`}
+        className={`flex origin-left items-center gap-2 transition-all ${additionalClasses} ${isAsideOpen ? "justify-center" : "justify-start"} `}
       >
         {Icon && (
           <span>
             <Icon size={20} />
           </span>
         )}
-        <p
-          className={`text-sm font-normal text-neutral-n60 ${isAsideOpen ? "delay-250 hidden transition-all" : "delay-400 block transition-all"}`}
+        <span
+          className={`origin-left text-sm font-normal text-neutral-n40 duration-200 ${isAsideOpen && "hidden"}`}
         >
           {label}
-        </p>
+        </span>
       </li>
     </Link>
   );
