@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -56,20 +56,26 @@ const config = {
           sm: "rgba(0, 0, 0, 0.075) 0 1px",
         },
         neutral: {
-          DEFAULT: "#F9FAFA",
-          n10: "#E7E7E9",
-          n20: "#E8EDDF",
-          n30: "#7d7c83",
+          DEFAULT: "#F9F8F6",
+          n10: "#F7F5F3",
+          n20: "#EEEDEC",
+          n30: "#DCDBDB",
           n40: "#636269",
-          n50: "#7D7C83",
+          n50: "#989695",
           n60: "#4A4950",
         },
         rm: {
-          DEFAULT: "#F4D35E",
+          DEFAULT: "#F4D35E", // ^? RapiMozo Yellow #FCAE40 <-- original logo color
         },
         alert: {
           n10: "#FAF8FF",
         },
+      },
+      fontSize: {
+        "display-small": ["36px", { lineHeight: "44px", fontWeight: "700" }],
+        "headline-medium": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+        "headline-small": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "title-large": ["22px", { lineHeight: "28px", fontWeight: "500" }],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,6 +99,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
 
 export default config;

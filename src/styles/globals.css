@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html, body, :root{
+  height: 100%;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -29,6 +31,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --select: "#c3c3c3"
   }
 
   .dark {
@@ -66,6 +69,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+}
+
+::selection{
+  background: #c3c3c3;
 }
 
 @keyframes openAside {
