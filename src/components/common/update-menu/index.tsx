@@ -5,7 +5,11 @@ import Card from "@/components/common/card";
 
 const UpdateMenu = () => {
   return (
-    <Card className={"col-start-1 col-end-6 row-start-1 row-end-4 grid"}>
+    <Card
+      className={
+        "row-start-1 row-end-4 grid md:col-start-1 md:col-end-7 lg:col-start-1 lg:col-end-6"
+      }
+    >
       <Box className={`flex flex-col ${twMerge("")}`}>
         <p> cargar menu</p>
       </Box>

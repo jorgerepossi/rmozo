@@ -24,7 +24,13 @@ const Layout = ({ children }: LayoutProps) => {
         <Aside />
         <Box className={"flex w-full flex-col gap-4"}>
           <Header />
-          <Box className={"px-4"}>{children}</Box>
+          <Box
+            className={
+              "grid grid-flow-col grid-cols-12 grid-rows-12 gap-[16px] px-4"
+            }
+          >
+            {children}
+          </Box>
         </Box>
       </Box>
     </main>

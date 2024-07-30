@@ -1,10 +1,6 @@
-import Link from "next/link";
+import SignIn from "@/components/pages/SignIn";
 
 const SignInPage = () => {
-  return (
-    <div>
-      <Link href={"/dashboard"}>Login </Link>
-    </div>
-  );
+  return <SignIn />;
 };
 export default SignInPage;

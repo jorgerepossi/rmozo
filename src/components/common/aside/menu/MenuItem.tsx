@@ -22,7 +22,7 @@ const MenuItem = ({
           </span>
         )}
         <span
-          className={`origin-left text-sm font-normal text-neutral-n40 duration-200 ${isAsideOpen && "hidden"}`}
+          className={`origin-left text-sm font-normal text-neutral-n50 duration-200 ${isAsideOpen && "hidden"}`}
         >
           {label}
         </span>

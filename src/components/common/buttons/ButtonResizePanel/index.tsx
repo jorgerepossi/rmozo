@@ -7,7 +7,9 @@ interface ButtonResizePanelProps {
 const ButtonResizePanel = ({ onClick }: ButtonResizePanelProps) => {
   return (
     <div
-      className={"bg-red absolute -right-4 -top-4 size-[24px] cursor-pointer"}
+      className={
+        "bg-red absolute -right-5 -top-4 flex size-[30px] cursor-pointer items-center justify-center border"
+      }
       onClick={onClick}
     >
       <PanelRightOpen className={"text-neutral-n30"} />
