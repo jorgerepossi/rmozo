@@ -1,12 +1,12 @@
 "use client";
 
+import { Lock } from "iconoir-react";
 import Image from "next/image";
 
 // Components
 import Box from "@/components/common/box";
 import SocialMedia from "@/components/common/social-media";
 import LoginForm from "@/components/pages/SignIn/LoginForm";
-import { Lock } from "iconoir-react";
 
 const SignIn = () => {
   return (
