@@ -2,7 +2,7 @@ import type { ReactNode, ElementType, ComponentPropsWithoutRef } from "react";
 
 interface BoxProps<T extends ElementType> {
   as?: T;
-  children: ReactNode;
+  children?: ReactNode;
   props?: ComponentPropsWithoutRef<T>;
   className?: string;
   onClick?: () => void;
