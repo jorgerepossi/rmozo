@@ -2,7 +2,6 @@ import {
   ChartLine,
   CheckIcon,
   Circle,
-  CircleCheckIcon,
   HandPlatter,
   Headset,
   LayoutDashboard,

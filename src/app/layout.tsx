@@ -4,10 +4,10 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
+import AuthProvider from "@/providers/AuthProvider";
 import ModalProvider from "@/providers/ModalProvider";
 import ToastProvider from "@/providers/ToastProvider";
 import { TRPCReactProvider } from "@/trpc/react";
-import AuthProvider from "@/providers/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Rapimozo",
