@@ -1,12 +1,14 @@
 import Link from "next/link";
 
+import Box from "@/components/common/box";
+
 const Logo = () => {
   return (
-    <div className={"flex flex-col"}>
+    <Box className={"flex flex-col"}>
       <Link href={"/dashboard"}>
-        <div className={"flex h-10 items-center justify-center"}>logo</div>
+        <Box className={"flex h-10 items-center justify-center"}>logo</Box>
       </Link>
-    </div>
+    </Box>
   );
 };
 export default Logo;

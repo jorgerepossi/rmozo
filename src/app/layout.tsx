@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import ModalProvider from "@/providers/ModalProvider";
 import ToastProvider from "@/providers/ToastProvider";
 import { TRPCReactProvider } from "@/trpc/react";
+import AuthProvider from "@/providers/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Rapimozo",
@@ -20,13 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <TRPCReactProvider>
-          <ThemeProvider>
-            <ToastProvider />
-            <ModalProvider />
-            {children}
-          </ThemeProvider>
-        </TRPCReactProvider>
+        <AuthProvider>
+          <TRPCReactProvider>
+            <ThemeProvider>
+              <ToastProvider />
+              <ModalProvider />
+              {children}
+            </ThemeProvider>
+          </TRPCReactProvider>
+        </AuthProvider>
       </body>
     </html>
   );

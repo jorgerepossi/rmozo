@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 
+import Box from "@/components/common/box";
 import Lock from "@/components/pages/SignIn/_components/Lock";
 
 type LoginStatus = "idle" | "loading" | "success" | "error";
@@ -23,9 +24,9 @@ const LoginStatusIndicator = ({ loginStatus }: Status) => {
   }, [loginStatus]);
 
   return (
-    <div className="absolute left-[48.5%] top-[45%] flex size-[55px] items-center justify-center rounded-full border">
+    <Box className="absolute left-[48.5%] top-[45%] flex size-[55px] items-center justify-center rounded-full border">
       <motion.div
-        className={`absolute inset-0 rounded-full border ${animationComplete ? (loginStatus === "success" ? "bg-white" : loginStatus === "error" ? "bg-red-500" : "") : "bg-white"}`}
+        className={`absolute inset-0 rounded-full border transition-all ${animationComplete ? (loginStatus === "success" ? "bg-white" : loginStatus === "error" ? "bg-red-500" : "") : "bg-white"}`}
         initial={{ borderColor: "transparent", borderWidth: 0 }}
         animate={
           loginStatus === "success" || loginStatus === "error"
@@ -63,7 +64,7 @@ const LoginStatusIndicator = ({ loginStatus }: Status) => {
                 : "transparent",
         }}
       />
-      <div className="relative z-10">
+      <Box className="relative z-10 transition-all">
         <Lock
           color={
             animationComplete
@@ -80,8 +81,8 @@ const LoginStatusIndicator = ({ loginStatus }: Status) => {
               : "black"
           }
         />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
