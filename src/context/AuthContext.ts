@@ -7,7 +7,9 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType>({
   authStatus: null,
-  setAuthStatus: () => {},
+  setAuthStatus: () => {
+    ("");
+  },
 });
 
 export default AuthContext;
