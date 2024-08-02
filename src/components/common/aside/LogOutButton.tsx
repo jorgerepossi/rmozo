@@ -2,6 +2,7 @@
 import { Power } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+import Box from "@/components/common/box";
 import { Button } from "@/components/ui/button";
 
 import useAuthStore from "@/store/auth";
@@ -14,11 +15,11 @@ const LogOutButton = () => {
     router.push("/signin");
   };
   return (
-    <div className={"flex h-10 items-center justify-center"}>
+    <Box className={"flex h-10 items-center justify-center"}>
       <Button className={"bg-rm"} onClick={handleLogOut}>
         <Power size={20} />
       </Button>
-    </div>
+    </Box>
   );
 };
 export default LogOutButton;

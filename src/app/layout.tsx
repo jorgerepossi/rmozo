@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
+import AuthProvider from "@/providers/AuthProvider";
 import ModalProvider from "@/providers/ModalProvider";
 import ToastProvider from "@/providers/ToastProvider";
 import { TRPCReactProvider } from "@/trpc/react";
@@ -20,13 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <TRPCReactProvider>
-          <ThemeProvider>
-            <ToastProvider />
-            <ModalProvider />
-            {children}
-          </ThemeProvider>
-        </TRPCReactProvider>
+        <AuthProvider>
+          <TRPCReactProvider>
+            <ThemeProvider>
+              <ToastProvider />
+              <ModalProvider />
+              {children}
+            </ThemeProvider>
+          </TRPCReactProvider>
+        </AuthProvider>
       </body>
     </html>
   );
