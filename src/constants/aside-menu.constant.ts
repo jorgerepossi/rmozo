@@ -1,5 +1,6 @@
 import {
   ChartLine,
+  CheckIcon,
   Circle,
   CircleCheckIcon,
   HandPlatter,
@@ -33,7 +34,7 @@ export const ASIDE_MENU = {
     { id: "8", label: "Servicios", icon: HandPlatter },
   ],
   BAR_TABLES: [
-    { id: "9", label: "Activas", icon: CircleCheckIcon },
+    { id: "9", label: "Activas", icon: CheckIcon },
     { id: "10", label: "Atendidas", icon: Circle },
   ],
 };

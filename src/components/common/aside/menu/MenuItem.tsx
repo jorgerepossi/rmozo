@@ -17,8 +17,13 @@ const MenuItem = ({
         className={`flex origin-left items-center gap-2 transition-all ${additionalClasses} ${isAsideOpen ? "justify-center" : "justify-start"} `}
       >
         {Icon && (
-          <span>
-            <Icon size={20} />
+          <span
+            className={`flex items-center justify-center rounded-full ${label === "Activas" ? "size-[20px] border-green-700 bg-green-700" : ""}`}
+          >
+            <Icon
+              className={`${label === "Activas" ? "stroke-alert-n10" : ""}`}
+              size={`${label === "Activas" ? 16 : 20}`}
+            />
           </span>
         )}
         <span
