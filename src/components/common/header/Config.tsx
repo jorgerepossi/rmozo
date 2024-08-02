@@ -10,7 +10,6 @@ const Config = () => {
   return (
     <Popover>
       <PopoverTrigger className={"border-neutral-n100 rounded-full border p-2"}>
-        {" "}
         <Settings />
       </PopoverTrigger>
       <PopoverContent className={"w-[auto]"}>

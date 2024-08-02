@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 
 import ModalProvider from "@/providers/ModalProvider";
@@ -14,11 +14,16 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+const myFont = Inter({
+  subsets: ["latin"],
+  variable: "--my-font-inter",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={`${myFont.variable}`}>
       <body>
         <TRPCReactProvider>
           <ThemeProvider>

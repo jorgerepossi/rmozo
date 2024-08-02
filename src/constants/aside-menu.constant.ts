@@ -2,7 +2,6 @@ import {
   ChartLine,
   CheckIcon,
   Circle,
-  CircleCheckIcon,
   HandPlatter,
   Headset,
   LayoutDashboard,
@@ -34,7 +33,7 @@ export const ASIDE_MENU = {
     { id: "8", label: "Servicios", icon: HandPlatter },
   ],
   BAR_TABLES: [
-    { id: "9", label: "Activas", icon: CheckIcon },
-    { id: "10", label: "Atendidas", icon: Circle },
+    { id: "9", label: "Activas", icon: CheckIcon, link: "actives-tables" },
+    { id: "10", label: "Atendidas", icon: Circle, link: "inactives-tables" },
   ],
 };
