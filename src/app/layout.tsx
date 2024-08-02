@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
 import ModalProvider from "@/providers/ModalProvider";
+import ToastProvider from "@/providers/ToastProvider";
 import { TRPCReactProvider } from "@/trpc/react";
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body>
         <TRPCReactProvider>
           <ThemeProvider>
+            <ToastProvider />
             <ModalProvider />
             {children}
           </ThemeProvider>

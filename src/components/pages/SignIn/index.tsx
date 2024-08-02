@@ -1,66 +1,60 @@
 "use client";
 
-import { Lock } from "iconoir-react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+
+import { useRouter } from "next/navigation";
 
 // Components
 import Box from "@/components/common/box";
 import SocialMedia from "@/components/common/social-media";
-import LoginForm from "@/components/pages/SignIn/LoginForm";
+import Heading from "@/components/pages/SignIn/_components/Heading";
+import LoginForm from "@/components/pages/SignIn/_components/LoginForm";
+import LoginStatusIndicator from "@/components/pages/SignIn/_components/LoginStatusIndicator";
+
+import useAuthStore from "@/store/auth";
 
 const SignIn = () => {
+  const [animationComplete, setAnimationComplete] = useState(false);
+  const router = useRouter();
+  const { loginStatus } = useAuthStore();
+
+  useEffect(() => {
+    if (loginStatus === "success") {
+      const timer = setTimeout(() => {
+        setAnimationComplete(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [loginStatus]);
+
+  useEffect(() => {
+    if (animationComplete && loginStatus === "success") {
+      setTimeout(() => {
+        router.push("/dashboard");
+      }, 500);
+    }
+  }, [animationComplete, loginStatus, router]);
+
   return (
-    <Box className={"grid h-[100dvh] grid-cols-12 grid-rows-12 bg-neutral-n10"}>
-      <Box
-        className={
-          "relative col-start-3 col-end-11 row-start-3 grid min-h-[780px] rounded-[32px] bg-white p-[16px] shadow-sm"
-        }
-      >
-        <div
-          className={
-            "absolute left-[49%] top-[5%] flex size-[40px] items-center justify-center rounded-full border border-neutral-n30 bg-white"
-          }
-        >
-          <Lock />
-        </div>
-        <Box className="grid grid-cols-12 gap-6">
-          <Box className={"col-start-1 col-end-7"}>
+    <Box className="flex h-[100dvh] items-center justify-center bg-neutral-n10">
+      <Box className="relative h-[760px] w-[1200px] rounded-[32px] bg-white p-[16px] shadow-sm">
+        <LoginStatusIndicator loginStatus={loginStatus} />
+        <Box className="grid h-full grid-cols-12 gap-6">
+          <Box className="col-start-1 col-end-7">
             <Box
-              as={"section"}
-              className={
-                "flex h-[100%] flex-col items-center justify-between gap-8 p-[56px]"
-              }
+              as="section"
+              className="flex h-[100%] flex-col items-center justify-between gap-8 px-[56px] pb-[56px] pt-[24px]"
             >
-              <Box>
-                <Image
-                  src={"/Logo_RapiMozo.png"}
-                  alt={"RapiMozo"}
-                  width={150}
-                  height={30}
-                  className={"w-full"}
-                />
-              </Box>
-              <Box>
-                <p
-                  className={
-                    "leading-display-small text-display-small font-bold"
-                  }
-                >
-                  Get Started
-                </p>
-              </Box>
+              <Heading />
               <LoginForm />
               <SocialMedia />
             </Box>
           </Box>
-          <Box
-            className={
-              "col-start-7 col-end-13 h-full w-full rounded-[24px] bg-rm"
-            }
-          />
+          <Box className="col-start-7 col-end-13 h-full w-full rounded-[24px] bg-rm" />
         </Box>
       </Box>
     </Box>
   );
 };
+
 export default SignIn;

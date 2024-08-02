@@ -1,18 +1,32 @@
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, Controller } from "react-hook-form";
 
+// Components
 import Box from "@/components/common/box";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 // Hooks
-import useLoginFormHandler from "@/hooks/formHandlers/useLoginFormHandler";
+import useLoginFormHandler, {
+  useAuthLoginTranslate,
+} from "@/hooks/formHandlers/useLoginFormHandler";
 
 // Types
 import type { UserAuthLogin } from "@/types/auth";
 
+// Utils
+import useLoginValidations from "@/utils/validations/useLogin.validations";
+
 const LoginForm = () => {
-  const { control, handleSubmit } = useForm<UserAuthLogin>();
+  const translate = useAuthLoginTranslate();
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<UserAuthLogin>({
+    resolver: zodResolver(useLoginValidations(translate)),
+    mode: "onChange",
+  });
   const { handleOnSubmit } = useLoginFormHandler();
 
   return (
@@ -22,22 +36,25 @@ const LoginForm = () => {
     >
       <Box className="flex flex-col gap-6">
         <Box className="flex flex-col gap-3">
-          <Label htmlFor="username" className="text-neutral-n40">
-            Username
-          </Label>
           <Controller
             name="username"
             control={control}
             defaultValue=""
             render={({ field }) => (
-              <Input {...field} id="username" placeholder="@barryallen" />
+              <Input
+                {...field}
+                placeholder="@barryallen"
+                type={"text"}
+                label={"Username"}
+                className={`${errors.username && "border-red-500 focus-visible:outline-red-500"}`}
+              />
             )}
           />
+          {errors.username && (
+            <p className="text-sm text-red-600">{errors.username.message}</p>
+          )}
         </Box>
         <Box className="flex flex-col gap-3">
-          <Label htmlFor="password" className="text-neutral-n40">
-            Password
-          </Label>
           <Controller
             name="password"
             control={control}
@@ -45,12 +62,16 @@ const LoginForm = () => {
             render={({ field }) => (
               <Input
                 {...field}
-                id="password"
                 placeholder="******"
                 type="password"
+                label={"Password"}
+                className={`${errors.password && "border-red-500 focus-visible:outline-red-500"}`}
               />
             )}
           />
+          {errors.password && (
+            <p className="text-sm text-red-600">{errors.password.message}</p>
+          )}
         </Box>
       </Box>
       <Box className="flex flex-col gap-4">
