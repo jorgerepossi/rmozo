@@ -60,9 +60,10 @@ const config: Config = {
           n10: "#F7F5F3",
           n20: "#EEEDEC",
           n30: "#DCDBDB",
-          n40: "#636269",
-          n50: "#989695",
+          n40: "#989695",
+          n50: "#636269",
           n60: "#4A4950",
+          n70: "#2f2e33",
         },
         rm: {
           DEFAULT: "#F4D35E", // ^? RapiMozo Yellow #FCAE40 <-- original logo color
