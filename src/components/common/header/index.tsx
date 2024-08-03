@@ -1,14 +1,12 @@
-import { useTheme } from "next-themes";
-
-import { Sun, Moon } from "lucide-react";
-
+// Components
 import Box from "@/components/common/box";
 import ButtonResizePanel from "@/components/common/buttons/ButtonResizePanel";
+import ChangeThemeButton from "@/components/common/buttons/ChangeTheme";
 import Config from "@/components/common/header/Config";
 import UserProfileHeader from "@/components/common/user-profile-header";
 
+// Store
 import useToggleAside from "@/store/toggle-aside";
-import ChangeThemeButton from "@/components/common/buttons/ChangeTheme";
 
 const Header = () => {
   const { toggleAside } = useToggleAside();
