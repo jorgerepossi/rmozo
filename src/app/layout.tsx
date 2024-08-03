@@ -26,7 +26,12 @@ export default function RootLayout({
     <html lang="en" className={`${myFont.variable}`}>
       <body>
         <TRPCReactProvider>
-          <ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
             <ToastProvider />
             <ModalProvider />
             {children}

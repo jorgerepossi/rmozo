@@ -8,6 +8,8 @@ import {
   QrCode,
 } from "lucide-react";
 
+import { ROUTES } from "@/constants/routes";
+
 export interface BarSection {
   id: string;
   label: string;
@@ -24,8 +26,13 @@ export const ASIDE_MENU = {
     { id: "2", label: "Atendida", link: "/perfil" },
   ],
   UTILITIES: [
-    { id: "11", label: "General", icon: LayoutDashboard, link: "general" },
-    { id: "4", label: "Estadísticas", icon: ChartLine },
+    { id: "11", label: "General", icon: LayoutDashboard, link: ROUTES.GENERAL },
+    {
+      id: "4",
+      label: "Estadísticas",
+      icon: ChartLine,
+      link: ROUTES.STATISTICS,
+    },
   ],
   SUPPORT: [
     { id: "6", label: "Generar QR", icon: QrCode },
@@ -33,7 +40,12 @@ export const ASIDE_MENU = {
     { id: "8", label: "Servicios", icon: HandPlatter },
   ],
   BAR_TABLES: [
-    { id: "9", label: "Activas", icon: CheckIcon, link: "actives-tables" },
-    { id: "10", label: "Atendidas", icon: Circle, link: "inactives-tables" },
+    { id: "9", label: "Activas", icon: CheckIcon, link: ROUTES.ACTIVE_TABLES },
+    {
+      id: "10",
+      label: "Atendidas",
+      icon: Circle,
+      link: ROUTES.INACTIVE_TABLES,
+    },
   ],
 };

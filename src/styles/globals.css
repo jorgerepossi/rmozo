@@ -10,7 +10,7 @@ html{
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
+    --card: #ffffff;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
@@ -33,13 +33,29 @@ html{
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --select: "#c3c3c3"
+    --select: "#c3c3c3";
+    --neutral: #F9F8F6;
+    --neutral-white: #fff;
+    --neutral-n10: #F7F5F3;
+    --neutral-n20: #EEEDEC;
+    --neutral-n30: #DCDBDB;
   }
+
+  /**
+  DEFAULT: "#F9F8F6",
+          n10: "#F7F5F3",
+          n20: "#EEEDEC",
+          n30: "#DCDBDB",
+          n40: "#989695",
+          n50: "#636269",
+          n60: "#4A4950",
+          n70: "#2f2e33",
+   */
 
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: #22262B;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -61,6 +77,11 @@ html{
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --neutral: #000000;
+    --neutral-white: #22262B;
+    --neutral-n10: #161A1D;
+    --neutral-n20: #0f1417;
+    --neutral-n30: #DCDBDB;
   }
 }
 

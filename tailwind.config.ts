@@ -56,9 +56,10 @@ const config: Config = {
           sm: "rgba(0, 0, 0, 0.075) 0 1px",
         },
         neutral: {
+          white: "var(--neutral-white)",
           DEFAULT: "#F9F8F6",
-          n10: "#F7F5F3",
-          n20: "#EEEDEC",
+          n10: "var(--neutral-n10)",
+          n20: "var(--neutral-n20)",
           n30: "#DCDBDB",
           n40: "#989695",
           n50: "#636269",
