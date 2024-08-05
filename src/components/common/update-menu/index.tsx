@@ -13,10 +13,22 @@ const UpdateMenu = () => {
     >
       <Title className={"!text-title-medium"}>Cargar menu</Title>
       <Box className={`flex flex-col ${twMerge("")}`}>
-        <p> blah</p>
+        <p className={"text-[--surface-n10]"}> blah</p>
       </Box>
-      <Box className={`flex flex-col ${twMerge("")}`}>
-        <p> blah</p>
+      <Box
+        className={`flex flex-col ${twMerge("rounded-[8px] bg-[--surface-n30] p-4")}`}
+      >
+        <Box className={"flex gap-[24px]"}>
+          <Box
+            className={
+              "flex h-[64px] w-[64px] items-center justify-center rounded-full bg-[--surface-n20]"
+            }
+          >
+            {" "}
+            ML
+          </Box>
+          <p> blah</p>
+        </Box>
       </Box>
     </Card>
   );

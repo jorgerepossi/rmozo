@@ -39,6 +39,14 @@ html{
     --neutral-n10: #F7F5F3;
     --neutral-n20: #EEEDEC;
     --neutral-n30: #DCDBDB;
+    --neutral-n40: #989695;
+    --neutral-n50: #636269;
+    --neutral-n60: #4A4950;
+
+    --surface-n10: ;
+    --surface-n20: #eaeaea;
+    --surface-n30: #f9f9f9;
+    --surface-n40: #ffffff;
   }
 
   /**
@@ -55,7 +63,7 @@ html{
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: #22262B;
+    --card: #22262b;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -77,11 +85,21 @@ html{
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --neutral: #000000;
+
+    --neutral: #090b0f;
     --neutral-white: #22262B;
-    --neutral-n10: #161A1D;
+    --neutral-n10: #090b0f;
     --neutral-n20: #0f1417;
+    /*--neutral-n20: #c7c8c9; font color*/
     --neutral-n30: #DCDBDB;
+    --neutral-n40: #989695;
+    --neutral-n50: #757270;
+    --neutral-n60: #4A4950;
+
+    --surface-n10: #717f8e;
+    --surface-n20: #3b424a;
+    --surface-n30: #2b3036;
+    --surface-n40: #22262b;
   }
 }
 

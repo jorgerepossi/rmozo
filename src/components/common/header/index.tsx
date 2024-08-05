@@ -13,15 +13,15 @@ const Header = () => {
 
   return (
     <header
-      className={
-        "flex h-[90px] items-center justify-between bg-[--neutral-white] px-4 shadow-sm"
-      }
+      className={"flex h-[90px] items-center justify-between px-4 shadow-sm"}
     >
       <Box className={"flex items-center gap-[24px]"}>
         <ButtonResizePanel onClick={toggleAside} />
         <Box>
-          <p> Dashboard</p>
-          <p className={"text-body-small"}> 12 Agosto 2024</p>
+          <p className={"text-headline-small"}> Dashboard</p>
+          <p className={"text-body-small text-[--neutral-n40]"}>
+            12 Agosto 2024
+          </p>
         </Box>
       </Box>
       <Box className={"flex items-center gap-4"}>

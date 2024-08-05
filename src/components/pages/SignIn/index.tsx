@@ -36,8 +36,8 @@ const SignIn = () => {
   }, [animationComplete, loginStatus, router]);
 
   return (
-    <Box className="flex h-[100dvh] items-center justify-center bg-neutral-n10">
-      <Box className="relative h-[760px] w-[1200px] rounded-[32px] bg-white p-[16px] shadow-sm">
+    <Box className="flex h-[100dvh] items-center justify-center bg-[--neutral-n10]">
+      <Box className="relative h-[760px] w-[1200px] rounded-[32px] bg-[--neutral-white] p-[16px] shadow-sm">
         <LoginStatusIndicator loginStatus={loginStatus} />
         <Box className="grid h-full grid-cols-12 gap-6">
           <Box className="col-start-1 col-end-7">

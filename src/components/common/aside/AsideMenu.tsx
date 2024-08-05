@@ -12,7 +12,7 @@ import { ASIDE_MENU } from "@/constants/aside-menu.constant";
 //! TODO integrate Zustand to open close menu
 const AsideMenu = () => {
   return (
-    <div className={"relative"}>
+    <div className={"relative py-4"}>
       <BarTablesMenu items={ASIDE_MENU.BAR_TABLES} />
       <UtilitiesMenu items={ASIDE_MENU.UTILITIES} />
       <SupportMenu items={ASIDE_MENU.SUPPORT} />

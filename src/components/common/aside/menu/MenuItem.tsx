@@ -1,20 +1,23 @@
 import Link from "next/link";
-
 import useToggleAside from "@/store/toggle-aside";
-
 import type { MenuItemProps } from "@/types/menu";
 
 const MenuItem = ({
   label,
   icon: Icon,
   link,
-  additionalClasses = "hover:bg-neutral py-3 transition-colors duration-200 cursor-pointer",
+  isActive,
+  additionalClasses = "hover:bg-[--surface-n40] py-3 transition-colors duration-200 cursor-pointer",
 }: MenuItemProps) => {
   const { isAsideOpen } = useToggleAside();
+
   return (
-    <Link href={link ?? ""}>
+    <Link
+      href={link ?? ""}
+      className={`${isActive ? "bg-[--surface-n40]" : "bg-transparent"}`}
+    >
       <li
-        className={`flex origin-left items-center gap-2 transition-all ${additionalClasses} ${isAsideOpen ? "justify-center" : "justify-start"} `}
+        className={`flex origin-left items-center gap-2 px-2 transition-all ${additionalClasses} ${isAsideOpen ? "justify-center" : "justify-start"}`}
       >
         {Icon && (
           <span
@@ -27,7 +30,7 @@ const MenuItem = ({
           </span>
         )}
         <span
-          className={`origin-left text-sm font-normal text-neutral-n50 duration-200 ${isAsideOpen && "hidden"}`}
+          className={`origin-left text-sm font-normal ${isActive ? "text-[--surface-n10]" : "text-[--neutral-n50]"} duration-200 ${isAsideOpen ? "hidden" : ""}`}
         >
           {label}
         </span>

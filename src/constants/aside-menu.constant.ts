@@ -26,7 +26,13 @@ export const ASIDE_MENU = {
     { id: "2", label: "Atendida", link: "/perfil" },
   ],
   UTILITIES: [
-    { id: "11", label: "General", icon: LayoutDashboard, link: ROUTES.GENERAL },
+    {
+      id: "11",
+      label: "General",
+      icon: LayoutDashboard,
+      link: ROUTES.GENERAL,
+      pathname: ROUTES.GENERAL,
+    },
     {
       id: "4",
       label: "Estadísticas",
@@ -40,12 +46,19 @@ export const ASIDE_MENU = {
     { id: "8", label: "Servicios", icon: HandPlatter },
   ],
   BAR_TABLES: [
-    { id: "9", label: "Activas", icon: CheckIcon, link: ROUTES.ACTIVE_TABLES },
+    {
+      id: "9",
+      label: "Activas",
+      icon: CheckIcon,
+      link: ROUTES.ACTIVE_TABLES,
+      pathname: ROUTES.ACTIVE_TABLES,
+    },
     {
       id: "10",
       label: "Atendidas",
       icon: Circle,
       link: ROUTES.INACTIVE_TABLES,
+      pathname: ROUTES.INACTIVE_TABLES,
     },
   ],
 };

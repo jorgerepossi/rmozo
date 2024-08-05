@@ -10,6 +10,8 @@ export interface MenuItemProps {
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
   additionalClasses?: string;
+  pathname?: string;
+  isActive?: boolean;
 }
 
 export interface MenuSectionProps {

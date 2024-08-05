@@ -55,15 +55,20 @@ const config: Config = {
         boxShadow: {
           sm: "rgba(0, 0, 0, 0.075) 0 1px",
         },
+        surface: {
+          n10: "",
+          n20: "",
+          n30: "",
+        },
         neutral: {
           white: "var(--neutral-white)",
           DEFAULT: "#F9F8F6",
           n10: "var(--neutral-n10)",
           n20: "var(--neutral-n20)",
-          n30: "#DCDBDB",
-          n40: "#989695",
+          n30: "var(--neutral-n30)",
+          n40: "var(--neutral-n40)",
           n50: "#636269",
-          n60: "#4A4950",
+          n60: "var(--neutral-n60)",
           n70: "#2f2e33",
         },
         rm: {
