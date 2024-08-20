@@ -1,4 +1,6 @@
 // Components
+import dayjs from "dayjs";
+
 import Box from "@/components/common/box";
 import ButtonResizePanel from "@/components/common/buttons/ButtonResizePanel";
 import ChangeThemeButton from "@/components/common/buttons/ChangeTheme";
@@ -20,7 +22,7 @@ const Header = () => {
         <Box>
           <p className={"text-headline-small"}> Dashboard</p>
           <p className={"text-body-small text-[--neutral-n40]"}>
-            12 Agosto 2024
+            {dayjs().format("dddd ,MM YYYY")}
           </p>
         </Box>
       </Box>
